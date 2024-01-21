@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: "fortnite";
+    src: url("../../public/assets/fonts/fortnite.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "fortnite";
+}
+
+.bg-img {
+    background-image: url("../../public/assets/images/background_fortnite_3.jpg");
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.text-home {
+    height: 550px;
+    border-radius: 65px;
+    width: 70%;
+    padding-left: 5%;
+    padding-right: 5%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.648);
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 4rem;
+    padding-top: 50px;
+}
+
+.second-title {
+    font-size: 3rem;
+    padding-top: 50px;
+
+}
+
+.paragraph {
+    padding-top: 50px;
+    font-size: 2rem;
+    padding-bottom: 40px;
+}
+
+.btn-home {
+    background-color: #F7FF19;
+    padding: 10px;
+    font-size: 3rem;
+}

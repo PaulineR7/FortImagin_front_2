@@ -1,0 +1,42 @@
+nav {
+    height: 100px;
+}
+
+.flex-list {
+    color: white;
+    font-size: 2rem;
+    padding-top: 45px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
+
+.logo {
+    height: 50px;
+    margin-top: -20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.img-user{
+    width: 40%;
+    margin-top: -15px;
+}
+
+.menu-with-submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.648);
+    border-radius: 25px;
+    width: 12%;
+    padding: 2%;
+    z-index: 1; 
+}
+
