@@ -1,8 +1,10 @@
 import Header from '../components/Header';
+import CommentFetcher from '../components/commentsFetcher';
 import './HomePage.scss';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
+    // CommentFetcher();
     return(
         <>
         <section className="bg-img">

@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import { jwtDecode } from "jwt-decode";
 
 function MyBattlePassPage () {
     const token = localStorage.getItem("jwt");
 
     const { pseudo } = useParams();
-
+    console.log(pseudo);
     const [battlepasses, setBattlePasses] = useState();
 
     useEffect(() => {
         async function fetchData () {
-            const battlePassResponse = await fetch("http://localhost:3000/api/battlepass/users/" + pseudo, 
+            const battlePassResponse = await fetch("http://localhost:3000/api/battlepass/users/" + jwtDecode(token).data, 
             { 
             headers: {
                 Authorization : "Bearer " + token,
@@ -19,8 +20,10 @@ function MyBattlePassPage () {
         })  
         
             const battlePassResponseData = await battlePassResponse.json();
-            console.log('ici')
+           
             setBattlePasses(battlePassResponseData)
+            console.log(battlePassResponseData);
+            console.log(jwtDecode(token).data)
         };
         fetchData();
     }, []);
@@ -33,7 +36,7 @@ function MyBattlePassPage () {
         
         <div className="block">
         
-        {battlepasses ? (
+        {battlepasses && battlepasses.length > 0 ? (
             <>
             
             {battlepasses.map((battlepass) => {

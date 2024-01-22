@@ -10,6 +10,7 @@ function HeaderAdmin() {
     return(
         <nav>
             <ul>
+                <li><Link to="/">Accueil site</Link></li>
                 <li><Link to="/admin">Liste Battle Pass</Link></li>
                 <li><Link to="/useradmin">Liste utilisateurs</Link></li>
                 <li><Link to="">Liste des commentaires</Link></li>

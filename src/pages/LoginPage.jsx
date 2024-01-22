@@ -53,7 +53,9 @@ function LoginPage () {
 }
 
 const clickLogout = (event) => {
+  event.preventDefault();
   localStorage.removeItem("jwt")
+  setMessage("Vous êtes bien déconnecté")
 
 }
     return(
