@@ -5,7 +5,7 @@ import './BattlePassDetailPage.scss';
 
 function BattlePassDetailPage () {
     const { id } = useParams();
-    const BpId = id;
+    // const BpId = id;
     
 
     const [battlepasses, setBattlePasses] = useState(null);
@@ -20,20 +20,22 @@ function BattlePassDetailPage () {
             const battlePassResponseData = await battlePassResponse.json();
 
             setBattlePasses(battlePassResponseData)
-            console.log(battlePassResponseData)
+            
         })();
     }, []);
-
+    
     const createComment = async(event) => {
         event.preventDefault();
 
-        const review = event.target.comment.value 
-        
+        const review = event.target.comment.value
+        console.log(review);
+
         const reviewToCreate = {
             reviews: review,
-            BattleId: BpId
+            battleId: id
           };
-          console.log(review)
+         
+
           const reviewToCreateJson = JSON.stringify(reviewToCreate);
       
           
@@ -46,7 +48,7 @@ function BattlePassDetailPage () {
               body: reviewToCreateJson,
             });
         
-
+            console.log(reviewResponse);
             
         if (reviewResponse.ok) {
             setMessage("Le commentaire a bien été créé");
@@ -54,7 +56,7 @@ function BattlePassDetailPage () {
         } else {
             setMessage("Erreur !");
         }
-        console.log(reviewToCreateJson);
+      
        
     }
 
@@ -65,7 +67,7 @@ function BattlePassDetailPage () {
         {battlepasses ? (
             <>
             <h2 className="title-bpdetails">{battlepasses.data.title.substr(1,battlepasses.data.title.length-2)}</h2>
-            <img className="img-bpdetails" src={battlepasses.data.imageUrl} alt="" />
+            <img className="img-bpdetails" src={battlepasses.data.imageUrl} alt="image battle pass" />
             <p className="paragraph-bpdetails"  dangerouslySetInnerHTML={{ __html: battlepasses.data.history.substr(1,battlepasses.data.history.length-2) }}></p>
             <p>Les commmentaires : </p>
             
@@ -80,7 +82,7 @@ function BattlePassDetailPage () {
         )}
         
 
-        <form onSubmit={createComment}>
+        <form onSubmit={(event) => createComment(event, battlepasses.id)}>
             {message && <p>{message}</p>}
             <textarea className="create-bp-text" type="text" name="comment" placeholder="Donne nous ton avis en laissant un commentaire" />
             <input className="btn-comment" type="submit" value="Commenter" />

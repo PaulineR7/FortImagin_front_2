@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import HeaderAdmin from "../../components/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 function DashboardAdmin() {
     
     const [battlepasses, setBattlePasses] = useState(null);
     const token = localStorage.getItem("jwt");
     const decodedToken = jwtDecode(token)
+    const navigate = useNavigate()
+
+
+    if(decodedToken.dataRole > 1 ) {
+        navigate('/login')
+    }
 
     useEffect(() => {
       (async () => {
@@ -32,10 +39,10 @@ function DashboardAdmin() {
       };
     
     return(
-        <>
+        <div className="bg-img">
         <HeaderAdmin />
-        <p>Bienvenue l'Admin</p>
-                <div>
+        
+                <div className="block">
                     {battlepasses ? (
                         <>
                         {battlepasses.map((battlepass) => {
@@ -52,7 +59,7 @@ function DashboardAdmin() {
                     )} 
                         
                 </div>
-        </>
+        </div>
     )
 }
 

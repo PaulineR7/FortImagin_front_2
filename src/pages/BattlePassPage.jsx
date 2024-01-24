@@ -17,7 +17,7 @@ function BattlePassPage() {
   }, []);
 
   
-
+  console.log(battlepasses);
   
    
 

@@ -9,6 +9,8 @@ import BattlePassDetailPage from './pages/BattlePassDetailPage';
 import MyBattlePassPage from './pages/MyBattlePassPage';
 import DashboardAdmin from './pages/admin/DashboardAdmin';
 import UsersPageAdmin from './pages/admin/UsersPageAdmin';
+import CommentsAdmin from './pages/admin/CommentsAdmin';
+import UpdateBattlePassUser from './pages/UpdateBattlePassUser';
 
 function App() {
   return (
@@ -21,9 +23,11 @@ function App() {
         <Route path='/createbattlepass' element={<CreateBattlePassPage />} />
         <Route path='/battlepassdetails/:id' element={<BattlePassDetailPage />} />
         <Route path='/mybattlepass/:pseudo' element={<MyBattlePassPage />} />
+        <Route path='/updatebp/:id' element={<UpdateBattlePassUser />} />
 
         <Route path='/admin' element={<DashboardAdmin />} />
         <Route path='/useradmin' element={<UsersPageAdmin />} />
+        <Route path='/commentsadmin' element={<CommentsAdmin />} />
       </Routes>
     </BrowserRouter>
   )

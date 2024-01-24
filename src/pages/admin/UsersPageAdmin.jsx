@@ -32,9 +32,9 @@ function UsersPageAdmin () {
       };
 
     return(
-        <>
+        <div className="bg-img">
         <HeaderAdmin />
-        <div>
+        <div className="block">
             <p>Listes des utilisateurs</p>
         {users ? (
             <>
@@ -51,8 +51,8 @@ function UsersPageAdmin () {
             <p>En cours de chargement</p>
         )} 
             
+        </div>
     </div>
-    </>
     )
 }
 
