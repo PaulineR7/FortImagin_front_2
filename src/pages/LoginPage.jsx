@@ -44,6 +44,7 @@ function LoginPage () {
           navigate("/admin")
         } else {
           setMessage("Vous êtes connectés")
+          navigate("/mybattlepass/:pseudo")
         }
     }
    

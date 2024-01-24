@@ -1,12 +1,14 @@
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import HeaderAdmin from "../../components/HeaderAdmin";
+import { useNavigate } from "react-router-dom";
 
 function UsersPageAdmin () {
 
     const [users, setUsers] = useState(null);
     const token = localStorage.getItem("jwt");
     const decodedToken = jwtDecode(token)
+    const navigate = useNavigate();
 
     useEffect(() => {
       (async () => {
@@ -31,6 +33,9 @@ function UsersPageAdmin () {
         
       };
 
+    if(decodedToken.dataRole > 1 ) {
+        navigate('/login')
+    }
     return(
         <div className="bg-img">
         <HeaderAdmin />

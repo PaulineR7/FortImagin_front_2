@@ -1,5 +1,5 @@
+import './MyBattlePassPage.scss';
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
@@ -46,24 +46,25 @@ function MyBattlePassPage () {
         <Header />
         
         <div className="block">
-            <h2>Bienvenue {jwtDecode(token).data}</h2>
+            <h2 className='titlepage'>Bienvenue {jwtDecode(token).data}</h2>
         {battlepasses && battlepasses.length > 0 ? (
             <>
             <h3>Vos battle Pass : </h3>
             {battlepasses.map((battlepass) => {
                 return( 
-                <>
-                <p>{battlepass.title}</p>
-                <img src={battlepass.imageUrl} alt="" />
-                <button><Link to={`/updatebp/${battlepass.id}`}>Modifier</Link></button>
-                <button onClick={(event) => handleDeleteBattlePass (event, battlepass.id)}>Supprimer</button>
-                </>
+                <div className="flexmybp">
+                    <img className='imgmybp' src={battlepass.imageUrl} alt="" />
+                    <p className='titlemybp'>{battlepass.title}</p>
+                    <button className='btnmybp'><Link to={`/updatebp/${battlepass.id}`}>Modifier</Link></button>
+                    <button className='btnmybp' onClick={(event) => handleDeleteBattlePass (event, battlepass.id)}>Supprimer</button>
+                </div>
                 )
             })}
             </>
         ) : (
             <p>En cours de chargement</p>
         )}
+            <button className='btn'> <Link to='/createbattlepass'> Créer ton Battle Pass</Link></button>
 
         </div>
         </div>
