@@ -1,16 +1,11 @@
+@import '../sass/abstracts/mixins';
+
+.bg-img {
+    @include bg-img;
+}
+
 .block {
-    height: 550px;
-    border-radius: 65px;
-    width: 70%;
-    padding-left: 5%;
-    padding-right: 5%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.648);
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    overflow: scroll;
-    overflow-x: hidden;
+    @include block;
 }
 
 .title-bp {

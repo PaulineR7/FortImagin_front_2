@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './DashboardAdmin.scss';
 import HeaderAdmin from "../../components/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
@@ -39,10 +40,11 @@ function DashboardAdmin() {
       };
     
     return(
-        <div className="bg-img">
+        <div className="bg-img-admin">
         <HeaderAdmin />
         
                 <div className="block">
+                    <p>Liste des Battle Pass</p>
                     {battlepasses ? (
                         <>
                         {battlepasses.map((battlepass) => {

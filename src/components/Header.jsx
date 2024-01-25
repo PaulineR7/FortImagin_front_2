@@ -17,7 +17,7 @@ function Header () {
         <nav>
             <ul className='flex-list'>
                 <li><img className='logo' src="assets/images/Fortnite_F_lettermark_logo-removebg-preview.png" alt="logo" /></li>
-                <li><Link to='/'>Accueil</Link></li>
+                <Link to='/'><li>Accueil</li></Link>
                 <li><Link to="/battlepass">Battle Pass</Link></li>
                 { token && <li><Link to={`/mybattlepass/${jwtDecode(token).data}`}>Mes Battle Pass</Link></li>}
                 <li className="menu-with-submenu"><img className='img-user' src="assets/icones/user.png" alt="utilisateur" />

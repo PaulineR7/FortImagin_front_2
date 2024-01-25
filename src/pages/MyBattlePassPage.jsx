@@ -63,7 +63,7 @@ function MyBattlePassPage () {
         ) : (
             <p>En cours de chargement</p>
         )}
-            <button className='btn'> <Link to='/createbattlepass'> Créer ton Battle Pass</Link></button>
+            <Link to='/createbattlepass'><button className='btn'> Créer ton Battle Pass</button></Link>
 
         </div>
         </div>

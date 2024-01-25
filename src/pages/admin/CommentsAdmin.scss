@@ -1,0 +1,9 @@
+@import '../../sass/abstracts/mixins';
+
+.bg-img-admin {
+    @include bg-img-admin;
+}
+
+.block {
+    @include block;
+}

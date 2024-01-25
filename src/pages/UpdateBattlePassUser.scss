@@ -1,0 +1,9 @@
+@import '../sass/abstracts/mixins';
+
+.bg-img {
+    @include bg-img;
+}
+
+.block {
+    @include block;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './CommentsAdmin.scss'
 import HeaderAdmin from "../../components/HeaderAdmin";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +24,7 @@ function CommentsAdmin () {
         navigate('/login')
     }
     return(
-        <div className="bg-img">
+        <div className="bg-img-admin">
         <HeaderAdmin />
         
         <div className="block">

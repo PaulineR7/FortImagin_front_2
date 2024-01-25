@@ -1,21 +1,16 @@
+@import '../sass/abstracts/mixins';
+
+.bg-img {
+    @include bg-img
+}
 .title-create-bp {
     font-size: 3rem;
     padding-top: 15px;
     text-transform: uppercase;
 }
 
-.block-create-bp {
-    height: 550px;
-    border-radius: 65px;
-    width: 70%;
-    padding-left: 5%;
-    padding-right: 5%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.648);
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    overflow: auto;
+.block {
+    @include block;
 }
 
 .create-bp-title {
@@ -27,4 +22,8 @@
     margin-top: 15px;
     font-size: 2rem;
     height: 20vh;
+}
+
+.btn {
+    @include btn;
 }

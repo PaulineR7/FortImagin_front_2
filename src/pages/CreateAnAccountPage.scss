@@ -1,21 +1,11 @@
+@import '../sass/abstracts/mixins';
+
 .bg-img {
-    background-image: url("../../public/assets/images/background_fortnite_3.jpg");
-    background-position:center;
-    background-size: cover;
-    height: 100vh;
+    @include bg-img;
 }
 
 .block {
-    height: 550px;
-    border-radius: 65px;
-    width: 70%;
-    padding-left: 5%;
-    padding-right: 5%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.648);
-    color: white;
-    text-align: center;
-    margin: 0 auto;
+    @include block;
 }
 
 .title-create{

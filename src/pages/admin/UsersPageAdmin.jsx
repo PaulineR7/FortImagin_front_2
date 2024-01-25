@@ -1,4 +1,5 @@
 import { jwtDecode } from "jwt-decode";
+import './UserPageAdmin.scss';
 import { useEffect, useState } from "react";
 import HeaderAdmin from "../../components/HeaderAdmin";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +38,7 @@ function UsersPageAdmin () {
         navigate('/login')
     }
     return(
-        <div className="bg-img">
+        <div className="bg-img-admin">
         <HeaderAdmin />
         <div className="block">
             <p>Listes des utilisateurs</p>

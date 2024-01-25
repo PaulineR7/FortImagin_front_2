@@ -1,3 +1,13 @@
+@import '../sass/abstracts/mixins';
+
+.bg-img {
+    @include bg-img;
+}
+
+.block {
+    @include block;
+}
+
 .flexmybp {
     display: flex;
     justify-content: space-between;

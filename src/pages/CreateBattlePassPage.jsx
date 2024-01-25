@@ -45,7 +45,7 @@ function CreateBattlePassPage () {
         <>
         <section className="bg-img">
         <Header />
-        <div className="block-create-bp">
+        <div className="block">
         <h2 className="title-create-bp">Créer ton battle pass</h2>
         {message && <p>{message}</p>}
         <form onSubmit={handleCreateBattlePass} className="form-flex">
@@ -53,7 +53,7 @@ function CreateBattlePassPage () {
             <textarea className="create-bp-text" type="text" name="history" placeholder="Imagine ton battle pass" />
             <input type="file" name="image" />
             
-            <input className="btn-create" type="submit" value="Envoyer" />
+            <input className="btn" type="submit" value="Envoyer" />
         </form>
         </div>
         </section>

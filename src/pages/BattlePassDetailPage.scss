@@ -1,3 +1,13 @@
+@import '../sass/abstracts/mixins';
+
+.bg-img{
+    @include bg-img;
+}
+
+.block {
+    @include block;
+}
+
 .title-bpdetails {
     font-size: 4rem;
     margin-top: 25px;
