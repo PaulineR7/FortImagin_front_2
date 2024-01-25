@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 function MyBattlePassPage () {
     const token = localStorage.getItem("jwt");
 
-    // const { pseudo } = useParams();
     
     const [battlepasses, setBattlePasses] = useState();
 

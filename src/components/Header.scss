@@ -1,6 +1,4 @@
-nav {
-    height: 100px;
-}
+
 
 .flex-list {
     color: white;
@@ -35,8 +33,30 @@ nav {
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.648);
     border-radius: 25px;
-    width: 12%;
+    width: 15%;
     padding: 2%;
     z-index: 1; 
+}
+
+.menu-link {
+    width: 12%;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .img-user{
+        margin-top: 0;
+        margin-left: 25%;
+    }
+
+    li {
+        margin-top: 10px;
+    }
 }
 

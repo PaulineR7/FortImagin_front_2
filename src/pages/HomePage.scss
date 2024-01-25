@@ -14,11 +14,10 @@
     background-image: url("../../public/assets/images/background_fortnite_3.jpg");
     background-position:center;
     background-size: cover;
-    height: 100vh;
+    // height: 100%;
 }
 
 .text-home {
-    height: 550px;
     border-radius: 65px;
     width: 70%;
     padding-left: 5%;
@@ -33,6 +32,7 @@
 .title {
     font-size: 4rem;
     padding-top: 50px;
+    text-transform: uppercase;
 }
 
 .second-title {
@@ -50,5 +50,13 @@
 .btn-home {
     background-color: #F7FF19;
     padding: 10px;
+    width: 50%;
     font-size: 3rem;
+    margin-bottom: 10px;
 }
+
+// @media screen and (max-width: 768px){
+//     .text-home {
+//         overflow: scroll;
+//     }
+// }
